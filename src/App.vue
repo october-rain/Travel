@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <!-- 展示当前路由地址所对应的内容，路由配置的哪里，就显示哪里 -->
-    <router-view/>
+    <keep-alive>
+      <!-- 展示当前路由地址所对应的内容，路由配置的哪里，就显示哪里 -->
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style>
