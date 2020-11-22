@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <keep-alive exclude="Detail">
       <!-- 展示当前路由地址所对应的内容，路由配置的哪里，就显示哪里 -->
       <router-view />
     </keep-alive>
