@@ -10,18 +10,26 @@
         </div>
       </div>
     </div>
-    <detail-gallary
-      :imgs="bannerImgs"
-      v-show="showGallary"
-      @close="handleGallaryClose"
-    ></detail-gallary>
+    <fade-animation>
+      <detail-gallary
+        :imgs="bannerImgs"
+        v-show="showGallary"
+        @close="handleGallaryClose"
+      ></detail-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import DetailGallary from "common/gallary/Gallary";
+import FadeAnimation from "common/fade/Fade";
+
 export default {
   name: "DetailBanner",
+  components: {
+    DetailGallary,
+    FadeAnimation
+  },
   data() {
     return {
       showGallary: false
@@ -31,9 +39,6 @@ export default {
     sightName: String,
     bannerImg: String,
     bannerImgs: Array
-  },
-  components: {
-    DetailGallary
   },
   methods: {
     handleBannerClick() {
